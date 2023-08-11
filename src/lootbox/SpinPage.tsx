@@ -10,7 +10,7 @@ import SpinCard from "./SpinCard";
 import { useWindowSize } from "react-use";
 import { CARD_GAP, CARD_WIDTH, DEMO_LOOTBOX } from "./config";
 import MiddleLine from "./MiddleLine";
-// import spin from "./spin.mp3"
+import spin from "./spin.mp3"
 
 const SpinPage = () => {
   const isDarkMode = true; // for theme
@@ -78,7 +78,7 @@ const SpinPage = () => {
     const winner =
       Math.floor(endValue / (CARD_WIDTH + CARD_GAP)) + prevCount - 2;
 
-      const audio = new Audio('./spin.mp3');
+      const audio = new Audio(spin);
       audio.play();
     
     const updateTargetValue = () => {
